@@ -4,7 +4,7 @@ import user from './assets/user.svg';
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 const textarea = document.querySelector('textarea')
-
+const logo = document.querySelector(".logo")
 let loadInterval;
 
 
@@ -74,7 +74,7 @@ const handleSubmit = async (e)=>{
   const data = new FormData(form)
 
   if(textarea.value.trim() !== ""){   // Check if the textarea not empty.
-    chatContainer.innerHTML = ''
+    logo.style.display = 'none'
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
     
