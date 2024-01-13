@@ -133,3 +133,14 @@ form.addEventListener('keydown', (e) => {
     handleSubmit(e);
   }
 });
+
+// Handle touch events for starting a new line
+form.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  const touch = e.touches[0];
+  const element = document.elementFromPoint(touch.clientX, touch.clientY);
+  
+  if (element.tagName === 'TEXTAREA') {
+    autoExpand();
+  }
+});
