@@ -202,5 +202,6 @@ form img {
 @media (max-width: 768px) {
   #app {
     width: 100vw;
+    height: 92vh;
   }
 }
