@@ -117,7 +117,6 @@ const handleSubmit = async (e)=>{
     }
 
   }
-
 }
 
 function autoExpand() {
@@ -133,3 +132,4 @@ form.addEventListener('keydown', (e) => {
     handleSubmit(e);
   }
 });
+
