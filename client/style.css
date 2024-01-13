@@ -150,28 +150,13 @@ form {
   border: 1px solid #99999970;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
   gap: 10px;
-}
-
-
-textarea {
-  width: 100%;
-  max-height:180px;
-  color: #fff;
-  font-size: 18px;
-  padding: 10px ;
-  background: transparent;
-  border: none;
-  outline: none;
-  resize: none;
-}
-textarea::placeholder {
-  color: #999;
+  position: relative;
 }
 
 textarea::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
+  
 }
 
 textarea::-webkit-scrollbar-thumb {
@@ -179,11 +164,30 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+textarea {
+  width: calc(100% - 30px);
+  max-height:200px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px ;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+}
+textarea::placeholder {
+  color: #999;
+}
+
 button {
   outline: 0;
   border: 0;
   cursor: pointer;
   background: transparent;
+  position: absolute;
+  bottom: 10px;
+  right:5px;
 }
 
 form img {

@@ -8,13 +8,6 @@ const logo = document.querySelector(".logo")
 let loadInterval;
 
 
-function autoExpand() {
-  textarea.style.height = textarea.scrollHeight + 'px';  
-}
-
-textarea.addEventListener('input', autoExpand)
-
-
 function loader(element){
   element.textContent = '';
 
@@ -127,11 +120,16 @@ const handleSubmit = async (e)=>{
 
 }
 
+function autoExpand() {
+  textarea.style.height = 'auto'
+  textarea.style.height = textarea.scrollHeight + 'px';  
+}
+
 form.addEventListener('submit', handleSubmit)
+form.addEventListener('input',autoExpand)
 
-form.addEventListener('keydown', (e)=>{
-
-  if(e.key === 'Enter' && !e.shiftKey){
-    handleSubmit(e)
+form.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter'  && !e.shiftKey) {
+    handleSubmit(e);
   }
-})
+});
